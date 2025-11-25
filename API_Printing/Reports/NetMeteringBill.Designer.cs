@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NetMeteringBill));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable7 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow76 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -475,6 +474,7 @@
             this.BillingMonth = new DevExpress.XtraReports.Parameters.Parameter();
             this.BillingYear = new DevExpress.XtraReports.Parameters.Parameter();
             this.Project = new DevExpress.XtraReports.Parameters.Parameter();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
@@ -483,37 +483,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "ConnectionBMSBT";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "SSQ_GetNetMeterBillsWithHistory";
-            queryParameter1.Name = "@Block";
-            queryParameter1.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?Block", typeof(string));
-            queryParameter2.Name = "@Category";
-            queryParameter2.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?Category", typeof(string));
-            queryParameter3.Name = "@BillingMonth";
-            queryParameter3.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?BillingMonth", typeof(string));
-            queryParameter4.Name = "@BillingYear";
-            queryParameter4.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?BillingYear", typeof(string));
-            queryParameter5.Name = "@Project";
-            queryParameter5.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?Project", typeof(string));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2,
-            queryParameter3,
-            queryParameter4,
-            queryParameter5});
-            storedProcQuery1.StoredProcName = "SSQ_GetNetMeterBillsWithHistory";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // Detail
             // 
@@ -872,7 +841,7 @@
             this.xrTableCell284.StylePriority.UseBorders = false;
             this.xrTableCell284.StylePriority.UseFont = false;
             this.xrTableCell284.StylePriority.UsePadding = false;
-            this.xrTableCell284.Text = "FPA (Feb-24 @4.9213)";
+            this.xrTableCell284.Text = "FPA [FPARate]";
             this.xrTableCell284.Weight = 1.0639838370122048D;
             // 
             // xrTableCell285
@@ -918,7 +887,7 @@
             this.xrTableCell90.Name = "xrTableCell90";
             this.xrTableCell90.StylePriority.UseBorders = false;
             this.xrTableCell90.StylePriority.UseFont = false;
-            this.xrTableCell90.Text = "-              [NMPreviousCredit]";
+            this.xrTableCell90.Text = "-              [NMCurrentCredit]";
             this.xrTableCell90.Weight = 0.93601616298779522D;
             // 
             // xrTableRow91
@@ -952,7 +921,7 @@
             this.xrTableCell297.Name = "xrTableCell297";
             this.xrTableCell297.StylePriority.UseBorders = false;
             this.xrTableCell297.StylePriority.UseFont = false;
-            this.xrTableCell297.Text = "-              [NMCurrentCredit]";
+            this.xrTableCell297.Text = "-              [NMPreviousCredit]";
             this.xrTableCell297.Weight = 0.93601616298779522D;
             // 
             // xrTableRow92
@@ -5319,6 +5288,8 @@
             // 
             this.xrTableCell45.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell45.CanGrow = false;
+            this.xrTableCell45.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MF@]")});
             this.xrTableCell45.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell45.Multiline = true;
             this.xrTableCell45.Name = "xrTableCell45";
@@ -5400,7 +5371,7 @@
             this.Block.AllowNull = true;
             this.Block.Name = "Block";
             dynamicListLookUpSettings1.DataMember = "SSQ_GetNetMeterBillsWithHistory";
-            dynamicListLookUpSettings1.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings1.DataSource = null;
             dynamicListLookUpSettings1.DisplayMember = "EB_Block";
             dynamicListLookUpSettings1.ValueMember = "EB_Block";
             this.Block.ValueSourceSettings = dynamicListLookUpSettings1;
@@ -5410,7 +5381,7 @@
             this.Category.AllowNull = true;
             this.Category.Name = "Category";
             dynamicListLookUpSettings2.DataMember = "SSQ_GetNetMeterBillsWithHistory";
-            dynamicListLookUpSettings2.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings2.DataSource = null;
             dynamicListLookUpSettings2.DisplayMember = "Category";
             dynamicListLookUpSettings2.ValueMember = "Category";
             this.Category.ValueSourceSettings = dynamicListLookUpSettings2;
@@ -5420,7 +5391,7 @@
             this.BillingMonth.AllowNull = true;
             this.BillingMonth.Name = "BillingMonth";
             dynamicListLookUpSettings3.DataMember = "SSQ_GetNetMeterBillsWithHistory";
-            dynamicListLookUpSettings3.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings3.DataSource = null;
             dynamicListLookUpSettings3.DisplayMember = "BillingMonth";
             dynamicListLookUpSettings3.ValueMember = "BillingMonth";
             this.BillingMonth.ValueSourceSettings = dynamicListLookUpSettings3;
@@ -5430,7 +5401,7 @@
             this.BillingYear.AllowNull = true;
             this.BillingYear.Name = "BillingYear";
             dynamicListLookUpSettings4.DataMember = "SSQ_GetNetMeterBillsWithHistory";
-            dynamicListLookUpSettings4.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings4.DataSource = null;
             dynamicListLookUpSettings4.DisplayMember = "BillingYear";
             dynamicListLookUpSettings4.ValueMember = "BillingYear";
             this.BillingYear.ValueSourceSettings = dynamicListLookUpSettings4;
@@ -5439,10 +5410,41 @@
             // 
             this.Project.Name = "Project";
             dynamicListLookUpSettings5.DataMember = "SSQ_GetNetMeterBillsWithHistory";
-            dynamicListLookUpSettings5.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings5.DataSource = null;
             dynamicListLookUpSettings5.DisplayMember = "Project";
             dynamicListLookUpSettings5.ValueMember = "Project";
             this.Project.ValueSourceSettings = dynamicListLookUpSettings5;
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "ConnectionBMSBT";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            storedProcQuery1.Name = "SSQ_GetNetMeterBillsWithHistory";
+            queryParameter1.Name = "@Block";
+            queryParameter1.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?Block", typeof(string));
+            queryParameter2.Name = "@Category";
+            queryParameter2.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?Category", typeof(string));
+            queryParameter3.Name = "@BillingMonth";
+            queryParameter3.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?BillingMonth", typeof(string));
+            queryParameter4.Name = "@BillingYear";
+            queryParameter4.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?BillingYear", typeof(string));
+            queryParameter5.Name = "@Project";
+            queryParameter5.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?Project", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3,
+            queryParameter4,
+            queryParameter5});
+            storedProcQuery1.StoredProcName = "SSQ_GetNetMeterBillsWithHistory";
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // NetMeteringBill
             // 
@@ -5907,7 +5909,6 @@
         private DevExpress.XtraReports.Parameters.Parameter BillingMonth;
         private DevExpress.XtraReports.Parameters.Parameter BillingYear;
         private DevExpress.XtraReports.Parameters.Parameter Project;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell312;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow28;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell97;
@@ -5919,5 +5920,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell318;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell319;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell320;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

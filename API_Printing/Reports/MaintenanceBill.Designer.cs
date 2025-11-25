@@ -757,7 +757,7 @@
             this.xrTableCell46.Name = "xrTableCell46";
             this.xrTableCell46.StylePriority.UseFont = false;
             this.xrTableCell46.StylePriority.UseTextAlignment = false;
-            this.xrTableCell46.Text = " Bahria Town PVT LTD - Services & Maintenance (Bank Copy)";
+            this.xrTableCell46.Text = " Bahria Town PVT LTD - Services & Maintenance (BTL Copy)";
             this.xrTableCell46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell46.Weight = 4.4775414082708389D;
             // 

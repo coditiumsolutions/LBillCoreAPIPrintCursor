@@ -810,12 +810,15 @@
             this.xrPictureBox3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrPictureBox3.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleRight;
             this.xrPictureBox3.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox3.ImageSource"));
             this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 600.0001F);
             this.xrPictureBox3.Name = "xrPictureBox3";
+            this.xrPictureBox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 10, 0, 0, 100F);
             this.xrPictureBox3.SizeF = new System.Drawing.SizeF(727F, 32.14563F);
             this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             this.xrPictureBox3.StylePriority.UseBorders = false;
+            this.xrPictureBox3.StylePriority.UsePadding = false;
             // 
             // xrTable37
             // 
@@ -1700,7 +1703,7 @@
             this.xrLabel1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Verdana", 7F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Verdana", 6.5F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(271.9408F, 125F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
@@ -1708,8 +1711,7 @@
             this.xrLabel1.StylePriority.UseBorders = false;
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Faysal Bank (3130301900222505)\r\nFacilitation Center Bahrial-Alfalah \r\nplaza(only " +
-    "Cash)\r\nFacilitation Center Bahira Orchard \r\n(only Cash)\r\n";
+            this.xrLabel1.Text = resources.GetString("xrLabel1.Text");
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrPictureBox4

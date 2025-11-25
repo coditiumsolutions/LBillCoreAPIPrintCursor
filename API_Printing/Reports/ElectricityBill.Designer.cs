@@ -389,7 +389,7 @@
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 50F;
+            this.TopMargin.HeightF = 45F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -421,7 +421,7 @@
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'*\' + [BTNo] + [BillingMonth] + [BillingYear] + \'*\'")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("IDAutomationHC39M Free Version", 8F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(239.6087F, 945.8336F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(239.6087F, 895F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 5, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -451,7 +451,7 @@
             this.xrTableRow59,
             this.xrTableRow60,
             this.xrTableRow61});
-            this.xrTable10.SizeF = new System.Drawing.SizeF(727.0001F, 240F);
+            this.xrTable10.SizeF = new System.Drawing.SizeF(727.0001F, 190F);
             this.xrTable10.StylePriority.UseBorders = false;
             this.xrTable10.StylePriority.UseFont = false;
             this.xrTable10.StylePriority.UseTextAlignment = false;
@@ -4116,7 +4116,7 @@
             this.DataMember = "SSQ_GetElectricityBillsWithHistory";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(50F, 50F, 50F, 50F);
+            this.Margins = new DevExpress.Drawing.DXMargins(50F, 50F, 45F, 50F);
             this.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 4, 0, 100F);
             this.PageHeight = 1169;
             this.PageWidth = 827;

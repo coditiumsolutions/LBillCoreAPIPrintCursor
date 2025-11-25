@@ -3118,6 +3118,7 @@
             this.xrTableCell68.Name = "xrTableCell68";
             this.xrTableCell68.StylePriority.UseFont = false;
             this.xrTableCell68.Text = "xrTableCell68";
+            this.xrTableCell68.TextFormatString = "{0:dd-MMM-yy}";
             this.xrTableCell68.Weight = 1.3688007875461126D;
             // 
             // xrTableCell69

@@ -1248,7 +1248,7 @@
             // 
             this.xrTableCell262.CanGrow = false;
             this.xrTableCell262.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_CustomerNo]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CustomerNo]")});
             this.xrTableCell262.Multiline = true;
             this.xrTableCell262.Name = "xrTableCell262";
             this.xrTableCell262.Text = "100000000024";
@@ -1277,7 +1277,7 @@
             // 
             this.xrTableCell265.Multiline = true;
             this.xrTableCell265.Name = "xrTableCell265";
-            this.xrTableCell265.Text = "[PloNo] / [EB_Block] / [EB_Sector]";
+            this.xrTableCell265.Text = "[PloNo] / [Block] / [Sector]";
             this.xrTableCell265.Weight = 2D;
             // 
             // xrTableCell268
@@ -1292,7 +1292,7 @@
             // 
             this.xrTableCell269.CanGrow = false;
             this.xrTableCell269.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_MeterNo]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MeterNo]")});
             this.xrTableCell269.Multiline = true;
             this.xrTableCell269.Name = "xrTableCell269";
             this.xrTableCell269.Text = "99423020042";
@@ -1511,7 +1511,7 @@
             // 
             this.xrTableCell293.CanGrow = false;
             this.xrTableCell293.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_CustomerNo]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CustomerNo]")});
             this.xrTableCell293.Multiline = true;
             this.xrTableCell293.Name = "xrTableCell293";
             this.xrTableCell293.Text = "100000000024";
@@ -1540,7 +1540,7 @@
             // 
             this.xrTableCell295.Multiline = true;
             this.xrTableCell295.Name = "xrTableCell295";
-            this.xrTableCell295.Text = "[PloNo] / [EB_Block] / [EB_Sector]";
+            this.xrTableCell295.Text = "[PloNo] / [Block] / [Sector]";
             this.xrTableCell295.Weight = 1.9999995802259911D;
             // 
             // xrTableCell298
@@ -1555,7 +1555,7 @@
             // 
             this.xrTableCell299.CanGrow = false;
             this.xrTableCell299.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_MeterNo]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MeterNo]")});
             this.xrTableCell299.Multiline = true;
             this.xrTableCell299.Name = "xrTableCell299";
             this.xrTableCell299.Text = "99423020042";
@@ -4139,7 +4139,7 @@
             // 
             this.xrTableCell17.CanGrow = false;
             this.xrTableCell17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_InstalledOn]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InstalledOn]")});
             this.xrTableCell17.Multiline = true;
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.Text = "19-Feb-2010";
@@ -4234,7 +4234,7 @@
             // 
             this.xrTableCell51.CanGrow = false;
             this.xrTableCell51.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_MeterType]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MeterType]")});
             this.xrTableCell51.Multiline = true;
             this.xrTableCell51.Name = "xrTableCell51";
             this.xrTableCell51.Text = "3-Phase ";
@@ -4345,7 +4345,7 @@
             this.xrTableCell32.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrTableCell32.CanGrow = false;
             this.xrTableCell32.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_MeterNo]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MeterNo]")});
             this.xrTableCell32.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableCell32.Multiline = true;
             this.xrTableCell32.Name = "xrTableCell32";
@@ -5068,7 +5068,7 @@
             this.xrTableCell23.StylePriority.UseFont = false;
             this.xrTableCell23.StylePriority.UsePadding = false;
             this.xrTableCell23.StylePriority.UseTextAlignment = false;
-            this.xrTableCell23.Text = "House No: [PloNo] Block:[EB_Block] Sector: [EB_Sector]";
+            this.xrTableCell23.Text = "House No: [PloNo] Block:[Block] Sector: [Sector]";
             this.xrTableCell23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell23.Weight = 10.90948830148416D;
             // 
@@ -5275,7 +5275,7 @@
             this.xrTableCell44.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrTableCell44.CanGrow = false;
             this.xrTableCell44.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EB_CustomerNo]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CustomerNo]")});
             this.xrTableCell44.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell44.Multiline = true;
             this.xrTableCell44.Name = "xrTableCell44";

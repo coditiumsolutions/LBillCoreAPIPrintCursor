@@ -421,7 +421,7 @@
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'*\' + [BTNo] + [BillingMonth] + [BillingYear] + \'*\'")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("IDAutomationHC39M Free Version", 8F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(239.6087F, 895F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(239.6087F, 915F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 5, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(270F, 40F);
@@ -451,7 +451,7 @@
             this.xrTableRow59,
             this.xrTableRow60,
             this.xrTableRow61});
-            this.xrTable10.SizeF = new System.Drawing.SizeF(727.0001F, 190F);
+            this.xrTable10.SizeF = new System.Drawing.SizeF(727.0001F, 210F);
             this.xrTable10.StylePriority.UseBorders = false;
             this.xrTable10.StylePriority.UseFont = false;
             this.xrTable10.StylePriority.UseTextAlignment = false;
@@ -471,7 +471,7 @@
             this.xrTableCell110.Multiline = true;
             this.xrTableCell110.Name = "xrTableCell110";
             this.xrTableCell110.Text = "Bahria Town Lahore - Electricity Bill(Bank Copy)";
-            this.xrTableCell110.Weight = 5D;
+            this.xrTableCell110.Weight = 4.9601097121441473D;
             // 
             // xrTableRow55
             // 
@@ -498,28 +498,28 @@
             this.xrTableCell181.Multiline = true;
             this.xrTableCell181.Name = "xrTableCell181";
             this.xrTableCell181.Text = "Reference No";
-            this.xrTableCell181.Weight = 0.76024640999155568D;
+            this.xrTableCell181.Weight = 0.61898200229692957D;
             // 
             // xrTableCell183
             // 
             this.xrTableCell183.Multiline = true;
             this.xrTableCell183.Name = "xrTableCell183";
             this.xrTableCell183.Text = "House No";
-            this.xrTableCell183.Weight = 0.59182258493418993D;
+            this.xrTableCell183.Weight = 0.962860914921924D;
             // 
             // xrTableCell184
             // 
             this.xrTableCell184.Multiline = true;
             this.xrTableCell184.Name = "xrTableCell184";
             this.xrTableCell184.Text = "Block";
-            this.xrTableCell184.Weight = 1.1952154023367998D;
+            this.xrTableCell184.Weight = 0.78461142596208067D;
             // 
             // xrTableCell190
             // 
             this.xrTableCell190.Multiline = true;
             this.xrTableCell190.Name = "xrTableCell190";
             this.xrTableCell190.Text = "Barcode No";
-            this.xrTableCell190.Weight = 0.80478459766320021D;
+            this.xrTableCell190.Weight = 0.94572436388895831D;
             // 
             // xrTableRow54
             // 
@@ -548,7 +548,7 @@
             this.xrTableCell170.Multiline = true;
             this.xrTableCell170.Name = "xrTableCell170";
             this.xrTableCell170.Text = "xrTableCell170";
-            this.xrTableCell170.Weight = 0.76024640999155568D;
+            this.xrTableCell170.Weight = 0.61898200229692957D;
             // 
             // xrTableCell171
             // 
@@ -556,7 +556,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PloNo]")});
             this.xrTableCell171.Multiline = true;
             this.xrTableCell171.Name = "xrTableCell171";
-            this.xrTableCell171.Weight = 0.59182258493418993D;
+            this.xrTableCell171.Weight = 0.962860914921924D;
             // 
             // xrTableCell173
             // 
@@ -565,7 +565,7 @@
             this.xrTableCell173.Multiline = true;
             this.xrTableCell173.Name = "xrTableCell173";
             this.xrTableCell173.Text = "xrTableCell173";
-            this.xrTableCell173.Weight = 1.1952154023367998D;
+            this.xrTableCell173.Weight = 0.78461142596208067D;
             // 
             // xrTableCell174
             // 
@@ -574,7 +574,7 @@
             this.xrTableCell174.Multiline = true;
             this.xrTableCell174.Name = "xrTableCell174";
             this.xrTableCell174.Text = "xrTableCell174";
-            this.xrTableCell174.Weight = 0.80478459766320021D;
+            this.xrTableCell174.Weight = 0.94572436388895831D;
             // 
             // xrTableRow52
             // 
@@ -601,23 +601,23 @@
             this.xrTableCell141.Multiline = true;
             this.xrTableCell141.Name = "xrTableCell141";
             this.xrTableCell141.Text = " Billing Month";
-            this.xrTableCell141.Weight = 0.76024640999155568D;
+            this.xrTableCell141.Weight = 0.61898200229692957D;
             // 
             // xrTableCell142
             // 
             this.xrTableCell142.Multiline = true;
             this.xrTableCell142.Name = "xrTableCell142";
             this.xrTableCell142.Text = "Billing Year";
-            this.xrTableCell142.Weight = 0.59182258493418993D;
+            this.xrTableCell142.Weight = 0.962860914921924D;
             // 
             // xrTableCell150
             // 
-            this.xrTableCell150.Font = new DevExpress.Drawing.DXFont("Arial", 7.55F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell150.Font = new DevExpress.Drawing.DXFont("Arial", 6.53F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell150.Multiline = true;
             this.xrTableCell150.Name = "xrTableCell150";
             this.xrTableCell150.StylePriority.UseFont = false;
             this.xrTableCell150.Text = "Payment Within Due Date";
-            this.xrTableCell150.Weight = 1.1952154023367998D;
+            this.xrTableCell150.Weight = 0.78461142596208067D;
             // 
             // xrTableCell151
             // 
@@ -626,7 +626,7 @@
             this.xrTableCell151.Name = "xrTableCell151";
             this.xrTableCell151.StylePriority.UseFont = false;
             this.xrTableCell151.Text = "Payment After Date";
-            this.xrTableCell151.Weight = 0.80478459766320021D;
+            this.xrTableCell151.Weight = 0.94572436388895831D;
             // 
             // xrTableRow53
             // 
@@ -656,7 +656,7 @@
             this.xrTableCell154.Multiline = true;
             this.xrTableCell154.Name = "xrTableCell154";
             this.xrTableCell154.Text = "xrTableCell154";
-            this.xrTableCell154.Weight = 0.76024640999155568D;
+            this.xrTableCell154.Weight = 0.61898200229692957D;
             // 
             // xrTableCell160
             // 
@@ -665,7 +665,7 @@
             this.xrTableCell160.Multiline = true;
             this.xrTableCell160.Name = "xrTableCell160";
             this.xrTableCell160.Text = "xrTableCell160";
-            this.xrTableCell160.Weight = 0.59182258493418993D;
+            this.xrTableCell160.Weight = 0.962860914921924D;
             // 
             // xrTableCell161
             // 
@@ -676,7 +676,7 @@
             this.xrTableCell161.Name = "xrTableCell161";
             this.xrTableCell161.StylePriority.UseFont = false;
             this.xrTableCell161.Text = "xrTableCell161";
-            this.xrTableCell161.Weight = 1.1952154023367998D;
+            this.xrTableCell161.Weight = 0.78461142596208067D;
             // 
             // xrTableCell163
             // 
@@ -687,7 +687,7 @@
             this.xrTableCell163.Name = "xrTableCell163";
             this.xrTableCell163.StylePriority.UseFont = false;
             this.xrTableCell163.Text = "xrTableCell163";
-            this.xrTableCell163.Weight = 0.80478459766320021D;
+            this.xrTableCell163.Weight = 0.94572436388895831D;
             // 
             // xrTableRow56
             // 
@@ -704,7 +704,7 @@
             this.xrTableCell191.Name = "xrTableCell191";
             this.xrTableCell191.Text = "---------------------------------------------------------------------------------" +
     "----------------------------------------------------------------";
-            this.xrTableCell191.Weight = 5D;
+            this.xrTableCell191.Weight = 4.9601097121441473D;
             // 
             // xrTableRow57
             // 
@@ -720,7 +720,7 @@
             this.xrTableCell211.Multiline = true;
             this.xrTableCell211.Name = "xrTableCell211";
             this.xrTableCell211.Text = "Bahria Town Lahore - Electricity Bill(BTL Copy)";
-            this.xrTableCell211.Weight = 5D;
+            this.xrTableCell211.Weight = 4.9601097121441473D;
             // 
             // xrTableRow58
             // 
@@ -747,28 +747,28 @@
             this.xrTableCell223.Multiline = true;
             this.xrTableCell223.Name = "xrTableCell223";
             this.xrTableCell223.Text = "Reference No";
-            this.xrTableCell223.Weight = 0.76024640999155568D;
+            this.xrTableCell223.Weight = 0.61898200229692957D;
             // 
             // xrTableCell224
             // 
             this.xrTableCell224.Multiline = true;
             this.xrTableCell224.Name = "xrTableCell224";
             this.xrTableCell224.Text = "House No ";
-            this.xrTableCell224.Weight = 0.59182258493418993D;
+            this.xrTableCell224.Weight = 0.962860914921924D;
             // 
             // xrTableCell229
             // 
             this.xrTableCell229.Multiline = true;
             this.xrTableCell229.Name = "xrTableCell229";
             this.xrTableCell229.Text = "Block";
-            this.xrTableCell229.Weight = 1.1952154023367998D;
+            this.xrTableCell229.Weight = 0.78461142596208067D;
             // 
             // xrTableCell230
             // 
             this.xrTableCell230.Multiline = true;
             this.xrTableCell230.Name = "xrTableCell230";
             this.xrTableCell230.Text = "Barcode No";
-            this.xrTableCell230.Weight = 0.80478459766320021D;
+            this.xrTableCell230.Weight = 0.94572436388895831D;
             // 
             // xrTableRow59
             // 
@@ -797,7 +797,7 @@
             this.xrTableCell232.Multiline = true;
             this.xrTableCell232.Name = "xrTableCell232";
             this.xrTableCell232.Text = "xrTableCell232";
-            this.xrTableCell232.Weight = 0.76024640999155568D;
+            this.xrTableCell232.Weight = 0.61898200229692957D;
             // 
             // xrTableCell233
             // 
@@ -805,7 +805,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PloNo]")});
             this.xrTableCell233.Multiline = true;
             this.xrTableCell233.Name = "xrTableCell233";
-            this.xrTableCell233.Weight = 0.59182258493418993D;
+            this.xrTableCell233.Weight = 0.962860914921924D;
             // 
             // xrTableCell234
             // 
@@ -814,7 +814,7 @@
             this.xrTableCell234.Multiline = true;
             this.xrTableCell234.Name = "xrTableCell234";
             this.xrTableCell234.Text = "xrTableCell234";
-            this.xrTableCell234.Weight = 1.1952154023367998D;
+            this.xrTableCell234.Weight = 0.78461142596208067D;
             // 
             // xrTableCell239
             // 
@@ -823,7 +823,7 @@
             this.xrTableCell239.Multiline = true;
             this.xrTableCell239.Name = "xrTableCell239";
             this.xrTableCell239.Text = "xrTableCell239";
-            this.xrTableCell239.Weight = 0.80478459766320021D;
+            this.xrTableCell239.Weight = 0.94572436388895831D;
             // 
             // xrTableRow60
             // 
@@ -850,23 +850,23 @@
             this.xrTableCell241.Multiline = true;
             this.xrTableCell241.Name = "xrTableCell241";
             this.xrTableCell241.Text = " Billing Month";
-            this.xrTableCell241.Weight = 0.76024640999155568D;
+            this.xrTableCell241.Weight = 0.61898200229692957D;
             // 
             // xrTableCell242
             // 
             this.xrTableCell242.Multiline = true;
             this.xrTableCell242.Name = "xrTableCell242";
             this.xrTableCell242.Text = "Billing Year";
-            this.xrTableCell242.Weight = 0.59182258493418993D;
+            this.xrTableCell242.Weight = 0.962860914921924D;
             // 
             // xrTableCell243
             // 
-            this.xrTableCell243.Font = new DevExpress.Drawing.DXFont("Arial", 7.55F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell243.Font = new DevExpress.Drawing.DXFont("Arial", 6.53F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell243.Multiline = true;
             this.xrTableCell243.Name = "xrTableCell243";
             this.xrTableCell243.StylePriority.UseFont = false;
             this.xrTableCell243.Text = "Payment Within Due Date";
-            this.xrTableCell243.Weight = 1.1952154023367998D;
+            this.xrTableCell243.Weight = 0.78461142596208067D;
             // 
             // xrTableCell244
             // 
@@ -875,7 +875,7 @@
             this.xrTableCell244.Name = "xrTableCell244";
             this.xrTableCell244.StylePriority.UseFont = false;
             this.xrTableCell244.Text = "Payment After Date";
-            this.xrTableCell244.Weight = 0.80478459766320021D;
+            this.xrTableCell244.Weight = 0.94572436388895831D;
             // 
             // xrTableRow61
             // 
@@ -905,7 +905,7 @@
             this.xrTableCell250.Multiline = true;
             this.xrTableCell250.Name = "xrTableCell250";
             this.xrTableCell250.Text = "xrTableCell250";
-            this.xrTableCell250.Weight = 0.76024640999155568D;
+            this.xrTableCell250.Weight = 0.61898200229692957D;
             // 
             // xrTableCell251
             // 
@@ -914,7 +914,7 @@
             this.xrTableCell251.Multiline = true;
             this.xrTableCell251.Name = "xrTableCell251";
             this.xrTableCell251.Text = "xrTableCell251";
-            this.xrTableCell251.Weight = 0.59182258493418993D;
+            this.xrTableCell251.Weight = 0.962860914921924D;
             // 
             // xrTableCell252
             // 
@@ -925,7 +925,7 @@
             this.xrTableCell252.Name = "xrTableCell252";
             this.xrTableCell252.StylePriority.UseFont = false;
             this.xrTableCell252.Text = "xrTableCell252";
-            this.xrTableCell252.Weight = 1.1952154023367998D;
+            this.xrTableCell252.Weight = 0.78461142596208067D;
             // 
             // xrTableCell253
             // 
@@ -936,7 +936,7 @@
             this.xrTableCell253.Name = "xrTableCell253";
             this.xrTableCell253.StylePriority.UseFont = false;
             this.xrTableCell253.Text = "xrTableCell253";
-            this.xrTableCell253.Weight = 0.80478459766320021D;
+            this.xrTableCell253.Weight = 0.94572436388895831D;
             // 
             // xrTable9
             // 

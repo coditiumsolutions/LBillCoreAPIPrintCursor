@@ -1282,6 +1282,8 @@
             // 
             // xrTableCell59
             // 
+            this.xrTableCell59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([Arrears] > 0, \'Disconnection Notice\', \'\')\n")});
             this.xrTableCell59.Font = new DevExpress.Drawing.DXFont("verdana", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell59.Name = "xrTableCell59";
             this.xrTableCell59.StylePriority.UseFont = false;
@@ -1524,6 +1526,7 @@
             this.xrTableCell40.StylePriority.UseFont = false;
             this.xrTableCell40.StylePriority.UseTextAlignment = false;
             this.xrTableCell40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell40.TextFormatString = "{0:0.########}";
             this.xrTableCell40.Weight = 1.6428886888724616D;
             // 
             // xrTable22

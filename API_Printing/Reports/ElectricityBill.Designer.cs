@@ -3814,8 +3814,10 @@
             // 
             this.xrTableCell7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PloNo]")});
+            this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
+            this.xrTableCell7.StylePriority.UseFont = false;
             this.xrTableCell7.Text = "1";
             this.xrTableCell7.Weight = 1.4249471371508553D;
             // 
@@ -3823,8 +3825,10 @@
             // 
             this.xrTableCell8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Block]")});
+            this.xrTableCell8.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.StylePriority.UseFont = false;
             this.xrTableCell8.Text = "xrTableCell8";
             this.xrTableCell8.Weight = 0.71876794802118071D;
             // 

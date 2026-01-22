@@ -42,6 +42,10 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -246,6 +250,8 @@
             this.BillingYear = new DevExpress.XtraReports.Parameters.Parameter();
             this.Project = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.BTNo = new DevExpress.XtraReports.Parameters.Parameter();
+            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable34)).BeginInit();
@@ -2386,7 +2392,7 @@
             // 
             this.xrTableCell9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PloNo]")});
-            this.xrTableCell9.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrTableCell9.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell9.Multiline = true;
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.StylePriority.UseFont = false;
@@ -2398,7 +2404,7 @@
             // 
             this.xrTableCell10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Block]")});
-            this.xrTableCell10.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrTableCell10.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseFont = false;
@@ -2623,6 +2629,33 @@
             this.PageHeader.HeightF = 67F;
             this.PageHeader.Name = "PageHeader";
             // 
+            // BTNo
+            // 
+            this.BTNo.Name = "BTNo";
+            // 
+            // sqlDataSource2
+            // 
+            this.sqlDataSource2.ConnectionName = "ConnectionBMSBT";
+            this.sqlDataSource2.Name = "sqlDataSource2";
+            storedProcQuery2.Name = "SSQCursor_MaintenanceBills";
+            queryParameter6.Name = "@BillingMonth";
+            queryParameter6.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?BillingMonth", typeof(string));
+            queryParameter7.Name = "@BillingYear";
+            queryParameter7.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?BillingYear", typeof(string));
+            queryParameter8.Name = "@BTNo";
+            queryParameter8.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?BTNo", typeof(string));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter6,
+            queryParameter7,
+            queryParameter8});
+            storedProcQuery2.StoredProcName = "SSQCursor_MaintenanceBills";
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery2});
+            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
+            // 
             // MaintenanceBill
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2631,7 +2664,8 @@
             this.Detail,
             this.PageHeader});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.sqlDataSource1});
+            this.sqlDataSource1,
+            this.sqlDataSource2});
             this.DataMember = "GetMaintenanceBills";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("verdana", 9.75F);
@@ -2650,7 +2684,8 @@
             this.Category,
             this.BillingMonth,
             this.BillingYear,
-            this.Project});
+            this.Project,
+            this.BTNo});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.GroupCaption1,
@@ -2908,5 +2943,7 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow30;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
+        private DevExpress.XtraReports.Parameters.Parameter BTNo;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
     }
 }

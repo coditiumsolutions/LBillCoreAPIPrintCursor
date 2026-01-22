@@ -1,8 +1,4 @@
-﻿using DevExpress.XtraReports.UI;
-using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
+﻿using System.ComponentModel;
 
 namespace API_Printing.Reports
 {
@@ -11,6 +7,11 @@ namespace API_Printing.Reports
         public MaintenanceBillCursor()
         {
             InitializeComponent();
+        }
+
+        private void Detail_BeforePrint(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

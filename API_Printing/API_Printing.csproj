@@ -21,4 +21,10 @@
     <Folder Include="Service\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Reports\MaintenanceBillCursor.cs">
+      <SubType>XtraReport</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

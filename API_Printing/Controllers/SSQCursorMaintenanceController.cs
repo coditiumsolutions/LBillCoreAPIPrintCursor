@@ -16,15 +16,27 @@ namespace API_Printing.Controllers
 
         [HttpGet("GetMBill")]
         public async Task<IActionResult> GetMBill(
-            [FromQuery] string BillingMonth,
-            [FromQuery] string BillingYear,
+            [FromQuery] List<string> BillingMonths,
+            [FromQuery] List<string> BillingYears,
             [FromQuery] List<string> BTNo,
             [FromServices] BillingService billingService)
         {
             try
             {
+                // Validation
                 if (BTNo == null || BTNo.Count == 0)
                     return BadRequest("At least one BTNo is required.");
+                if (BillingMonths == null || BillingMonths.Count == 0)
+                    return BadRequest("At least one BillingMonth is required.");
+                if (BillingYears == null || BillingYears.Count == 0)
+                    return BadRequest("At least one BillingYear is required.");
+
+                // Check if all lists have same count (for combination matching)
+                if (BTNo.Count != BillingMonths.Count || BTNo.Count != BillingYears.Count)
+                {
+                    // If counts don't match, we'll use unique combinations
+                    Console.WriteLine($"Warning: Count mismatch - BTNo: {BTNo.Count}, Months: {BillingMonths.Count}, Years: {BillingYears.Count}");
+                }
 
                 var report = new MaintenanceBillCursor();
 
@@ -34,14 +46,15 @@ namespace API_Printing.Controllers
                     {
                         report.Parameters[name].Value = value;
                         report.Parameters[name].Visible = false;
+                        Console.WriteLine($"Parameter {name} set to: {value}");
                     }
                 }
 
-                SetParameter("BillingMonth", BillingMonth);
-                SetParameter("BillingYear", BillingYear);
-
-                // 👇 Pass comma-separated BTNos to SQL
-                SetParameter("BTNo", string.Join(",", BTNo));
+                // Convert lists to comma-separated strings for SQL
+                // Use Distinct() to remove duplicates if needed
+                SetParameter("BillingMonth", string.Join(",", BillingMonths.Distinct()));
+                SetParameter("BillingYear", string.Join(",", BillingYears.Distinct()));
+                SetParameter("BTNo", string.Join(",", BTNo.Distinct()));
 
                 if (report.DataSource is SqlDataSource ds)
                 {
@@ -53,69 +66,13 @@ namespace API_Printing.Controllers
                 stream.Position = 0;
 
                 return File(stream.ToArray(), "application/pdf", "MaintenanceBill.pdf");
+
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                Console.WriteLine($"Error: {ex.Message}\n{ex.StackTrace}");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
-
-
-
-
-
-
-
-
-        //[HttpGet("GetMBill")]
-        //public async Task<IActionResult> GetMBill(
-        //    [FromQuery] string BillingMonth,
-        //    [FromQuery] string BillingYear,
-        //    [FromQuery] string BTNo,
-        //    [FromServices] BillingService billingService)
-        //{
-        //    try
-        //    {
-        //        // Initialize DevExpress report
-        //        var report = new MaintenanceBill();
-
-        //        if (report == null)
-        //        {
-        //            return StatusCode(500, "Failed to initialize the MaintenanceBill report.");
-        //        }
-
-        //        // Helper to set report parameters safely
-        //        void SetParameter(string paramName, object value)
-        //        {
-        //            if (report.Parameters[paramName] != null)
-        //            {
-        //                report.Parameters[paramName].Value = value;
-        //                report.Parameters[paramName].Visible = false;
-        //            }
-        //        }
-
-        //        // Set required parameters
-        //        SetParameter("BillingMonth", BillingMonth);
-        //        SetParameter("BillingYear", BillingYear);
-        //        SetParameter("BTNo", BTNo);
-
-        //        // Increase SQL timeout
-        //        if (report.DataSource is SqlDataSource sqlDataSource)
-        //        {
-        //            sqlDataSource.ConnectionOptions.CommandTimeout = 120;
-        //        }
-
-        //        // Export PDF
-        //        using var stream = new MemoryStream();
-        //        report.ExportToPdf(stream);
-        //        stream.Seek(0, SeekOrigin.Begin);
-
-        //        return File(stream.ToArray(), "application/pdf", "MaintenanceBill.pdf");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, $"Error generating Maintenance Bill report: {ex.Message}");
-        //    }
-        //}
     }
 }

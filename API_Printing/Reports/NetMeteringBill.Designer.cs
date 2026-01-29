@@ -249,7 +249,6 @@
             this.xrTableCell255 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow64 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell261 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTableRow65 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell267 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTable5 = new DevExpress.XtraReports.UI.XRTable();
@@ -420,9 +419,6 @@
             this.xrTableRow19 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell95 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrTableRow20 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell101 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrPictureBox3 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTableRow21 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell107 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow22 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -649,7 +645,7 @@
             this.xrTableCell264.Name = "xrTableCell264";
             this.xrTableCell264.StylePriority.UseBorders = false;
             this.xrTableCell264.StylePriority.UseFont = false;
-            this.xrTableCell264.Text = "-               [OPC]";
+            this.xrTableCell264.Text = "-               [OPC!0.##]";
             this.xrTableCell264.Weight = 0.93601616298779522D;
             // 
             // xrTableRow78
@@ -1024,7 +1020,7 @@
             this.xrTableCell271.Name = "xrTableCell271";
             this.xrTableCell271.StylePriority.UseBorders = false;
             this.xrTableCell271.StylePriority.UseFont = false;
-            this.xrTableCell271.Text = "-               [Arrears!#]";
+            this.xrTableCell271.Text = "-               [Arrears!0.########]";
             this.xrTableCell271.Weight = 0.93601616298779522D;
             // 
             // xrTableRow89
@@ -1053,6 +1049,9 @@
             // 
             this.xrTableCell287.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell287.CanGrow = false;
+            this.xrTableCell287.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'-               \'+Iif([NMTotalCredit] < 0, \'CR \' + [BillAmountInDueDate],[BillAm" +
+                    "ountInDueDate])\n")});
             this.xrTableCell287.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableCell287.Multiline = true;
             this.xrTableCell287.Name = "xrTableCell287";
@@ -1121,6 +1120,9 @@
             // 
             this.xrTableCell76.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell76.CanGrow = false;
+            this.xrTableCell76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'-               \'+Iif([NMTotalCredit] < 0, \'CR \' + [BillAmountAfterDueDate],[Bil" +
+                    "lAmountAfterDueDate])")});
             this.xrTableCell76.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableCell76.Multiline = true;
             this.xrTableCell76.Name = "xrTableCell76";
@@ -1345,7 +1347,7 @@
             // 
             this.xrTableCell275.CanGrow = false;
             this.xrTableCell275.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BillAmountInDueDate]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NMTotalCredit] < 0, \'CR \' + [BillAmountInDueDate],[BillAmountInDueDate])\n")});
             this.xrTableCell275.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell275.Multiline = true;
             this.xrTableCell275.Name = "xrTableCell275";
@@ -1409,7 +1411,8 @@
             // 
             this.xrTableCell281.CanGrow = false;
             this.xrTableCell281.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BillAmountAfterDueDate]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NMTotalCredit] < 0, \'CR \' + [BillAmountAfterDueDate],[BillAmountAfterDueDate" +
+                    "])\n")});
             this.xrTableCell281.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell281.Multiline = true;
             this.xrTableCell281.Name = "xrTableCell281";
@@ -1608,7 +1611,7 @@
             // 
             this.xrTableCell305.CanGrow = false;
             this.xrTableCell305.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BillAmountInDueDate]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NMTotalCredit] < 0, \'CR \' + [BillAmountInDueDate],[BillAmountInDueDate])\n")});
             this.xrTableCell305.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell305.Multiline = true;
             this.xrTableCell305.Name = "xrTableCell305";
@@ -1672,7 +1675,8 @@
             // 
             this.xrTableCell311.CanGrow = false;
             this.xrTableCell311.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BillAmountAfterDueDate]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NMTotalCredit] < 0, \'CR \' + [BillAmountAfterDueDate],[BillAmountAfterDueDate" +
+                    "])\n")});
             this.xrTableCell311.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell311.Multiline = true;
             this.xrTableCell311.Name = "xrTableCell311";
@@ -2650,24 +2654,12 @@
             // 
             // xrTableCell261
             // 
+            this.xrTableCell261.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrTableCell261.CanGrow = false;
-            this.xrTableCell261.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox1});
             this.xrTableCell261.Multiline = true;
             this.xrTableCell261.Name = "xrTableCell261";
+            this.xrTableCell261.StylePriority.UseBorders = false;
             this.xrTableCell261.Weight = 6D;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox1.ImageSource"));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(20, 20, 0, 0, 100F);
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(336.4165F, 55.56318F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
-            this.xrPictureBox1.StylePriority.UseBorders = false;
-            this.xrPictureBox1.StylePriority.UsePadding = false;
             // 
             // xrTableRow65
             // 
@@ -3541,7 +3533,7 @@
             this.xrTableCell188.Name = "xrTableCell188";
             this.xrTableCell188.StylePriority.UseBorders = false;
             this.xrTableCell188.StylePriority.UseFont = false;
-            this.xrTableCell188.Text = "Mar";
+            this.xrTableCell188.Text = "Nov";
             this.xrTableCell188.Weight = 0.87331977238515535D;
             // 
             // xrTableCell189
@@ -3555,7 +3547,7 @@
             this.xrTableCell189.Name = "xrTableCell189";
             this.xrTableCell189.StylePriority.UseBorders = false;
             this.xrTableCell189.StylePriority.UseFont = false;
-            this.xrTableCell189.Text = "Apr";
+            this.xrTableCell189.Text = "Dec";
             this.xrTableCell189.Weight = 0.87331977238515535D;
             // 
             // xrTableCell190
@@ -3569,7 +3561,7 @@
             this.xrTableCell190.Name = "xrTableCell190";
             this.xrTableCell190.StylePriority.UseBorders = false;
             this.xrTableCell190.StylePriority.UseFont = false;
-            this.xrTableCell190.Text = "May";
+            this.xrTableCell190.Text = "Jan";
             this.xrTableCell190.Weight = 0.87331977238515535D;
             // 
             // xrTableCell191
@@ -3583,7 +3575,7 @@
             this.xrTableCell191.Name = "xrTableCell191";
             this.xrTableCell191.StylePriority.UseBorders = false;
             this.xrTableCell191.StylePriority.UseFont = false;
-            this.xrTableCell191.Text = "June";
+            this.xrTableCell191.Text = "Feb";
             this.xrTableCell191.Weight = 0.87331977238515535D;
             // 
             // xrTableRow46
@@ -3622,7 +3614,7 @@
             this.xrTableCell193.Name = "xrTableCell193";
             this.xrTableCell193.StylePriority.UseBorders = false;
             this.xrTableCell193.StylePriority.UseFont = false;
-            this.xrTableCell193.Text = "375";
+            this.xrTableCell193.Text = "250";
             this.xrTableCell193.Weight = 0.87331977238515535D;
             // 
             // xrTableCell194
@@ -3636,7 +3628,7 @@
             this.xrTableCell194.Name = "xrTableCell194";
             this.xrTableCell194.StylePriority.UseBorders = false;
             this.xrTableCell194.StylePriority.UseFont = false;
-            this.xrTableCell194.Text = "375";
+            this.xrTableCell194.Text = "250";
             this.xrTableCell194.Weight = 0.87331977238515535D;
             // 
             // xrTableCell195
@@ -3650,7 +3642,7 @@
             this.xrTableCell195.Name = "xrTableCell195";
             this.xrTableCell195.StylePriority.UseBorders = false;
             this.xrTableCell195.StylePriority.UseFont = false;
-            this.xrTableCell195.Text = "500";
+            this.xrTableCell195.Text = "250";
             this.xrTableCell195.Weight = 0.87331977238515535D;
             // 
             // xrTableCell196
@@ -3664,7 +3656,7 @@
             this.xrTableCell196.Name = "xrTableCell196";
             this.xrTableCell196.StylePriority.UseBorders = false;
             this.xrTableCell196.StylePriority.UseFont = false;
-            this.xrTableCell196.Text = "500";
+            this.xrTableCell196.Text = "250";
             this.xrTableCell196.Weight = 0.87331977238515535D;
             // 
             // xrTableRow47
@@ -3703,7 +3695,7 @@
             this.xrTableCell198.Name = "xrTableCell198";
             this.xrTableCell198.StylePriority.UseBorders = false;
             this.xrTableCell198.StylePriority.UseFont = false;
-            this.xrTableCell198.Text = "450";
+            this.xrTableCell198.Text = "300";
             this.xrTableCell198.Weight = 0.87331977238515535D;
             // 
             // xrTableCell199
@@ -3717,7 +3709,7 @@
             this.xrTableCell199.Name = "xrTableCell199";
             this.xrTableCell199.StylePriority.UseBorders = false;
             this.xrTableCell199.StylePriority.UseFont = false;
-            this.xrTableCell199.Text = "450";
+            this.xrTableCell199.Text = "300";
             this.xrTableCell199.Weight = 0.87331977238515535D;
             // 
             // xrTableCell200
@@ -3731,7 +3723,7 @@
             this.xrTableCell200.Name = "xrTableCell200";
             this.xrTableCell200.StylePriority.UseBorders = false;
             this.xrTableCell200.StylePriority.UseFont = false;
-            this.xrTableCell200.Text = "600";
+            this.xrTableCell200.Text = "300";
             this.xrTableCell200.Weight = 0.87331977238515535D;
             // 
             // xrTableCell201
@@ -3745,7 +3737,7 @@
             this.xrTableCell201.Name = "xrTableCell201";
             this.xrTableCell201.StylePriority.UseBorders = false;
             this.xrTableCell201.StylePriority.UseFont = false;
-            this.xrTableCell201.Text = "600";
+            this.xrTableCell201.Text = "300";
             this.xrTableCell201.Weight = 0.87331977238515535D;
             // 
             // xrTableRow48
@@ -3784,7 +3776,7 @@
             this.xrTableCell203.Name = "xrTableCell203";
             this.xrTableCell203.StylePriority.UseBorders = false;
             this.xrTableCell203.StylePriority.UseFont = false;
-            this.xrTableCell203.Text = "600";
+            this.xrTableCell203.Text = "400";
             this.xrTableCell203.Weight = 0.87331977238515535D;
             // 
             // xrTableCell204
@@ -3798,7 +3790,7 @@
             this.xrTableCell204.Name = "xrTableCell204";
             this.xrTableCell204.StylePriority.UseBorders = false;
             this.xrTableCell204.StylePriority.UseFont = false;
-            this.xrTableCell204.Text = "600";
+            this.xrTableCell204.Text = "400";
             this.xrTableCell204.Weight = 0.87331977238515535D;
             // 
             // xrTableCell205
@@ -3812,7 +3804,7 @@
             this.xrTableCell205.Name = "xrTableCell205";
             this.xrTableCell205.StylePriority.UseBorders = false;
             this.xrTableCell205.StylePriority.UseFont = false;
-            this.xrTableCell205.Text = "800";
+            this.xrTableCell205.Text = "400";
             this.xrTableCell205.Weight = 0.87331977238515535D;
             // 
             // xrTableCell206
@@ -3826,7 +3818,7 @@
             this.xrTableCell206.Name = "xrTableCell206";
             this.xrTableCell206.StylePriority.UseBorders = false;
             this.xrTableCell206.StylePriority.UseFont = false;
-            this.xrTableCell206.Text = "800";
+            this.xrTableCell206.Text = "400";
             this.xrTableCell206.Weight = 0.87331977238515535D;
             // 
             // xrTableRow49
@@ -3865,7 +3857,7 @@
             this.xrTableCell208.Name = "xrTableCell208";
             this.xrTableCell208.StylePriority.UseBorders = false;
             this.xrTableCell208.StylePriority.UseFont = false;
-            this.xrTableCell208.Text = "900";
+            this.xrTableCell208.Text = "600";
             this.xrTableCell208.Weight = 0.87331977238515535D;
             // 
             // xrTableCell209
@@ -3879,7 +3871,7 @@
             this.xrTableCell209.Name = "xrTableCell209";
             this.xrTableCell209.StylePriority.UseBorders = false;
             this.xrTableCell209.StylePriority.UseFont = false;
-            this.xrTableCell209.Text = "900";
+            this.xrTableCell209.Text = "600";
             this.xrTableCell209.Weight = 0.87331977238515535D;
             // 
             // xrTableCell210
@@ -3893,7 +3885,7 @@
             this.xrTableCell210.Name = "xrTableCell210";
             this.xrTableCell210.StylePriority.UseBorders = false;
             this.xrTableCell210.StylePriority.UseFont = false;
-            this.xrTableCell210.Text = "1200";
+            this.xrTableCell210.Text = "600";
             this.xrTableCell210.Weight = 0.87331977238515535D;
             // 
             // xrTableCell211
@@ -3907,7 +3899,7 @@
             this.xrTableCell211.Name = "xrTableCell211";
             this.xrTableCell211.StylePriority.UseBorders = false;
             this.xrTableCell211.StylePriority.UseFont = false;
-            this.xrTableCell211.Text = "1200";
+            this.xrTableCell211.Text = "600";
             this.xrTableCell211.Weight = 0.87331977238515535D;
             // 
             // xrTable3
@@ -4043,7 +4035,6 @@
             this.xrTableRow17,
             this.xrTableRow18,
             this.xrTableRow19,
-            this.xrTableRow20,
             this.xrTableRow21,
             this.xrTableRow22,
             this.xrTableRow23});
@@ -4148,7 +4139,7 @@
             // xrTableCell18
             // 
             this.xrTableCell18.CanGrow = false;
-            this.xrTableCell18.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
+            this.xrTableCell18.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableCell18.Multiline = true;
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 2, 0, 0, 100F);
@@ -4156,7 +4147,9 @@
             this.xrTableCell18.StylePriority.UseFont = false;
             this.xrTableCell18.StylePriority.UsePadding = false;
             this.xrTableCell18.StylePriority.UseTextAlignment = false;
-            this.xrTableCell18.Text = resources.GetString("xrTableCell18.Text");
+            this.xrTableCell18.Text = "Facilitation Center Bahrial-Alfalah plaza(only\r\nCash)\r\nFacilitation Center Bahria" +
+    " Orchard (only Cash)\r\nBill Collection Timing From\r\n09:00 to 17:00 (Only Working " +
+    "Days)";
             this.xrTableCell18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell18.Weight = 2.2314861005390254D;
             // 
@@ -4338,7 +4331,7 @@
             this.xrTableCell60,
             this.xrTableCell61});
             this.xrTableRow13.Name = "xrTableRow13";
-            this.xrTableRow13.Weight = 0.56D;
+            this.xrTableRow13.Weight = 0.69613341686524977D;
             // 
             // xrTableCell32
             // 
@@ -4422,7 +4415,7 @@
             this.xrTableCell67,
             this.xrTableCell68});
             this.xrTableRow14.Name = "xrTableRow14";
-            this.xrTableRow14.Weight = 0.55999999999999983D;
+            this.xrTableRow14.Weight = 0.8538606073801156D;
             // 
             // xrTableCell63
             // 
@@ -4497,7 +4490,7 @@
             this.xrTableCell74,
             this.xrTableCell75});
             this.xrTableRow15.Name = "xrTableRow15";
-            this.xrTableRow15.Weight = 0.560155331171074D;
+            this.xrTableRow15.Weight = 0.46408823063509913D;
             // 
             // xrTableCell70
             // 
@@ -4577,7 +4570,7 @@
             this.xrTableRow16.StylePriority.UseBackColor = false;
             this.xrTableRow16.StylePriority.UseFont = false;
             this.xrTableRow16.StylePriority.UseForeColor = false;
-            this.xrTableRow16.Weight = 0.43984466882892637D;
+            this.xrTableRow16.Weight = 0.56075972792556716D;
             // 
             // xrTableCell77
             // 
@@ -4631,7 +4624,7 @@
             this.xrTableRow17.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableRow17.Name = "xrTableRow17";
             this.xrTableRow17.StylePriority.UseFont = false;
-            this.xrTableRow17.Weight = 0.56D;
+            this.xrTableRow17.Weight = 0.56076112147968527D;
             // 
             // xrTableCell84
             // 
@@ -4691,7 +4684,7 @@
             this.xrTableRow18.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableRow18.Name = "xrTableRow18";
             this.xrTableRow18.StylePriority.UseFont = false;
-            this.xrTableRow18.Weight = 0.56000030517578114D;
+            this.xrTableRow18.Weight = 0.92817840361449644D;
             // 
             // xrTableCell82
             // 
@@ -4747,7 +4740,7 @@
             this.xrTableRow19.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrTableRow19.Name = "xrTableRow19";
             this.xrTableRow19.StylePriority.UseFont = false;
-            this.xrTableRow19.Weight = 4.539998757834149D;
+            this.xrTableRow19.Weight = 6.7098545220839156D;
             // 
             // xrTableCell95
             // 
@@ -4767,41 +4760,9 @@
             this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox2.Name = "xrPictureBox2";
             this.xrPictureBox2.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 15, 0, 0, 100F);
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(468.1017F, 97.82605F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(468.1017F, 144.5812F);
             this.xrPictureBox2.StylePriority.UseBorders = false;
             this.xrPictureBox2.StylePriority.UsePadding = false;
-            // 
-            // xrTableRow20
-            // 
-            this.xrTableRow20.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell101});
-            this.xrTableRow20.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-            this.xrTableRow20.Name = "xrTableRow20";
-            this.xrTableRow20.StylePriority.UseFont = false;
-            this.xrTableRow20.Weight = 3.243336022051722D;
-            // 
-            // xrTableCell101
-            // 
-            this.xrTableCell101.CanGrow = false;
-            this.xrTableCell101.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox3});
-            this.xrTableCell101.Multiline = true;
-            this.xrTableCell101.Name = "xrTableCell101";
-            this.xrTableCell101.Text = "xrTableCell101";
-            this.xrTableCell101.Weight = 4.50716866813297D;
-            // 
-            // xrPictureBox3
-            // 
-            this.xrPictureBox3.Borders = DevExpress.XtraPrinting.BorderSide.Left;
-            this.xrPictureBox3.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox3.ImageSource"));
-            this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrPictureBox3.Name = "xrPictureBox3";
-            this.xrPictureBox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(40, 40, 0, 0, 100F);
-            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(468.1017F, 69.88609F);
-            this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
-            this.xrPictureBox3.StylePriority.UseBorders = false;
-            this.xrPictureBox3.StylePriority.UsePadding = false;
             // 
             // xrTableRow21
             // 
@@ -4812,7 +4773,7 @@
             this.xrTableRow21.StylePriority.UseFont = false;
             this.xrTableRow21.StylePriority.UseTextAlignment = false;
             this.xrTableRow21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableRow21.Weight = 0.599999969416519D;
+            this.xrTableRow21.Weight = 0.69613336988716634D;
             // 
             // xrTableCell107
             // 
@@ -4833,7 +4794,7 @@
             this.xrTableRow22.StylePriority.UseFont = false;
             this.xrTableRow22.StylePriority.UseTextAlignment = false;
             this.xrTableRow22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableRow22.Weight = 0.5999999769850124D;
+            this.xrTableRow22.Weight = 0.60331559334421059D;
             // 
             // xrTableCell113
             // 
@@ -4854,7 +4815,7 @@
             this.xrTableRow23.StylePriority.UseFont = false;
             this.xrTableRow23.StylePriority.UseTextAlignment = false;
             this.xrTableRow23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableRow23.Weight = 0.59999982954521425D;
+            this.xrTableRow23.Weight = 0.7502492903119431D;
             // 
             // xrTableCell119
             // 
@@ -5578,8 +5539,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell93;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow19;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell95;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow20;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell101;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow21;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell107;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow22;
@@ -5598,7 +5557,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell86;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell91;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox2;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox3;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox5;
         private DevExpress.XtraReports.UI.XRTable xrTable3;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow24;
@@ -5797,7 +5755,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell261;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow65;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell267;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRTable xrTable6;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow66;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell43;

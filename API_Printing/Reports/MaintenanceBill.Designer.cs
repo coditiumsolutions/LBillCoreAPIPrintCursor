@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaintenanceBill));
             DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -42,7 +36,12 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -246,6 +245,7 @@
             this.BillingYear = new DevExpress.XtraReports.Parameters.Parameter();
             this.Project = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable34)).BeginInit();
@@ -287,37 +287,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "ConnectionBMSBT";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "GetMaintenanceBills";
-            queryParameter1.Name = "@Block";
-            queryParameter1.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?Block", typeof(string));
-            queryParameter2.Name = "@Category";
-            queryParameter2.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?Category", typeof(string));
-            queryParameter3.Name = "@BillingMonth";
-            queryParameter3.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?BillingMonth", typeof(string));
-            queryParameter4.Name = "@BillingYear";
-            queryParameter4.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?BillingYear", typeof(string));
-            queryParameter5.Name = "@Project";
-            queryParameter5.Type = typeof(global::DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?Project", typeof(string));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2,
-            queryParameter3,
-            queryParameter4,
-            queryParameter5});
-            storedProcQuery1.StoredProcName = "GetMaintenanceBills";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // TopMargin
             // 
@@ -1690,7 +1659,7 @@
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseFont = false;
-            this.xrTableCell7.Text = "Fine\t";
+            this.xrTableCell7.Text = "Fine    [FineDept]";
             this.xrTableCell7.Weight = 2.8986424975395724D;
             // 
             // xrTableCell62
@@ -2572,7 +2541,7 @@
             this.Block.AllowNull = true;
             this.Block.Name = "Block";
             dynamicListLookUpSettings1.DataMember = "GetMaintenanceBills";
-            dynamicListLookUpSettings1.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings1.DataSource = null;
             dynamicListLookUpSettings1.DisplayMember = "Block";
             dynamicListLookUpSettings1.ValueMember = "Block";
             this.Block.ValueSourceSettings = dynamicListLookUpSettings1;
@@ -2582,7 +2551,7 @@
             this.Category.AllowNull = true;
             this.Category.Name = "Category";
             dynamicListLookUpSettings2.DataMember = "GetMaintenanceBills";
-            dynamicListLookUpSettings2.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings2.DataSource = null;
             dynamicListLookUpSettings2.DisplayMember = null;
             this.Category.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
@@ -2591,7 +2560,7 @@
             this.BillingMonth.AllowNull = true;
             this.BillingMonth.Name = "BillingMonth";
             dynamicListLookUpSettings3.DataMember = "GetMaintenanceBills";
-            dynamicListLookUpSettings3.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings3.DataSource = null;
             dynamicListLookUpSettings3.DisplayMember = "BillingMonth";
             dynamicListLookUpSettings3.ValueMember = "BillingMonth";
             this.BillingMonth.ValueSourceSettings = dynamicListLookUpSettings3;
@@ -2601,7 +2570,7 @@
             this.BillingYear.AllowNull = true;
             this.BillingYear.Name = "BillingYear";
             dynamicListLookUpSettings4.DataMember = "GetMaintenanceBills";
-            dynamicListLookUpSettings4.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings4.DataSource = null;
             dynamicListLookUpSettings4.DisplayMember = "BillingYear";
             dynamicListLookUpSettings4.ValueMember = "BillingYear";
             this.BillingYear.ValueSourceSettings = dynamicListLookUpSettings4;
@@ -2611,7 +2580,7 @@
             this.Project.AllowNull = true;
             this.Project.Name = "Project";
             dynamicListLookUpSettings5.DataMember = "GetMaintenanceBills";
-            dynamicListLookUpSettings5.DataSource = this.sqlDataSource1;
+            dynamicListLookUpSettings5.DataSource = null;
             dynamicListLookUpSettings5.DisplayMember = "Project";
             dynamicListLookUpSettings5.ValueMember = "Project";
             this.Project.ValueSourceSettings = dynamicListLookUpSettings5;
@@ -2622,6 +2591,37 @@
             this.xrTable1});
             this.PageHeader.HeightF = 67F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "ConnectionBMSBT";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            storedProcQuery1.Name = "GetMaintenanceBills";
+            queryParameter1.Name = "@Block";
+            queryParameter1.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?Block", typeof(string));
+            queryParameter2.Name = "@Category";
+            queryParameter2.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?Category", typeof(string));
+            queryParameter3.Name = "@BillingMonth";
+            queryParameter3.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?BillingMonth", typeof(string));
+            queryParameter4.Name = "@BillingYear";
+            queryParameter4.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?BillingYear", typeof(string));
+            queryParameter5.Name = "@Project";
+            queryParameter5.Type = typeof(global::DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?Project", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3,
+            queryParameter4,
+            queryParameter5});
+            storedProcQuery1.StoredProcName = "GetMaintenanceBills";
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // MaintenanceBill
             // 
@@ -2832,7 +2832,6 @@
         private DevExpress.XtraReports.Parameters.Parameter BillingMonth;
         private DevExpress.XtraReports.Parameters.Parameter BillingYear;
         private DevExpress.XtraReports.Parameters.Parameter Project;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox3;
         private DevExpress.XtraReports.UI.XRTable xrTable37;
@@ -2908,5 +2907,6 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow30;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

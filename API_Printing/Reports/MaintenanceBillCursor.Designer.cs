@@ -239,7 +239,7 @@
             this.BillingYear = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.BTNo = new DevExpress.XtraReports.Parameters.Parameter();
-            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable34)).BeginInit();
@@ -1653,7 +1653,7 @@
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseFont = false;
-            this.xrTableCell7.Text = "Fine\t";
+            this.xrTableCell7.Text = "Fine   [FineDept]";
             this.xrTableCell7.Weight = 2.8986424975395724D;
             // 
             // xrTableCell62
@@ -2535,7 +2535,7 @@
             this.BillingMonth.AllowNull = true;
             this.BillingMonth.Name = "BillingMonth";
             dynamicListLookUpSettings1.DataMember = "SSQCursor_MaintenanceBills";
-            dynamicListLookUpSettings1.DataSource = this.sqlDataSource2;
+            dynamicListLookUpSettings1.DataSource = null;
             dynamicListLookUpSettings1.DisplayMember = "BillingMonth";
             dynamicListLookUpSettings1.ValueMember = "BillingMonth";
             this.BillingMonth.ValueSourceSettings = dynamicListLookUpSettings1;
@@ -2545,7 +2545,7 @@
             this.BillingYear.AllowNull = true;
             this.BillingYear.Name = "BillingYear";
             dynamicListLookUpSettings2.DataMember = "SSQCursor_MaintenanceBills";
-            dynamicListLookUpSettings2.DataSource = this.sqlDataSource2;
+            dynamicListLookUpSettings2.DataSource = null;
             dynamicListLookUpSettings2.DisplayMember = "BillingYear";
             dynamicListLookUpSettings2.ValueMember = "BillingYear";
             this.BillingYear.ValueSourceSettings = dynamicListLookUpSettings2;
@@ -2563,17 +2563,17 @@
             this.BTNo.MultiValue = true;
             this.BTNo.Name = "BTNo";
             dynamicListLookUpSettings3.DataMember = "SSQCursor_MaintenanceBills";
-            dynamicListLookUpSettings3.DataSource = this.sqlDataSource2;
+            dynamicListLookUpSettings3.DataSource = null;
             dynamicListLookUpSettings3.DisplayMember = "BTNo";
             dynamicListLookUpSettings3.FilterString = null;
             dynamicListLookUpSettings3.SortMember = null;
             dynamicListLookUpSettings3.ValueMember = "BTNo";
             this.BTNo.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
-            // sqlDataSource2
+            // sqlDataSource1
             // 
-            this.sqlDataSource2.ConnectionName = "ConnectionBMSBT";
-            this.sqlDataSource2.Name = "sqlDataSource2";
+            this.sqlDataSource1.ConnectionName = "ConnectionBMSBT";
+            this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "SSQCursor_MaintenanceBills";
             queryParameter1.Name = "@BillingMonth";
             queryParameter1.Type = typeof(global::DevExpress.DataAccess.Expression);
@@ -2589,9 +2589,9 @@
             queryParameter2,
             queryParameter3});
             storedProcQuery1.StoredProcName = "SSQCursor_MaintenanceBills";
-            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
-            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // MaintenanceBillCursor
             // 
@@ -2601,9 +2601,9 @@
             this.Detail,
             this.PageHeader});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.sqlDataSource2});
+            this.sqlDataSource1});
             this.DataMember = "SSQCursor_MaintenanceBills";
-            this.DataSource = this.sqlDataSource2;
+            this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("verdana", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(50F, 50F, 45F, 50F);
             this.PageHeight = 1169;
@@ -2871,6 +2871,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
         private DevExpress.XtraReports.Parameters.Parameter BTNo;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

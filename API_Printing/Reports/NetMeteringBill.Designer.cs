@@ -870,7 +870,7 @@
             this.xrTableCell285.Name = "xrTableCell285";
             this.xrTableCell285.StylePriority.UseBorders = false;
             this.xrTableCell285.StylePriority.UseFont = false;
-            this.xrTableCell285.Text = "               [FPACHARGES!#]\r";
+            this.xrTableCell285.Text = "               [FPACHARGES!0.########]\r";
             this.xrTableCell285.Weight = 0.93601616298779522D;
             // 
             // xrTableRow80
@@ -4591,7 +4591,7 @@
             // 
             this.xrTableCell85.CanGrow = false;
             this.xrTableCell85.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PreviousSolarReading]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Difference2]")});
             this.xrTableCell85.Multiline = true;
             this.xrTableCell85.Name = "xrTableCell85";
             this.xrTableCell85.Weight = 0.74919526656202051D;
@@ -4600,7 +4600,7 @@
             // 
             this.xrTableCell86.CanGrow = false;
             this.xrTableCell86.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PreviousReading2]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Difference1]")});
             this.xrTableCell86.Multiline = true;
             this.xrTableCell86.Name = "xrTableCell86";
             this.xrTableCell86.Weight = 0.703605083146256D;
@@ -4652,7 +4652,7 @@
             // 
             this.xrTableCell89.CanGrow = false;
             this.xrTableCell89.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CurrentReading2]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DifferenceSolar]")});
             this.xrTableCell89.Multiline = true;
             this.xrTableCell89.Name = "xrTableCell89";
             this.xrTableCell89.Weight = 0.74919526656202051D;
@@ -4708,7 +4708,7 @@
             // xrTableCell322
             // 
             this.xrTableCell322.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CurrentSolarReading]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SumUnitsExport]")});
             this.xrTableCell322.Multiline = true;
             this.xrTableCell322.Name = "xrTableCell322";
             this.xrTableCell322.Weight = 0.74919526656202051D;

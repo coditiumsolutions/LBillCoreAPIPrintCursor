@@ -1405,7 +1405,7 @@
             this.xrTableCell278.Name = "xrTableCell278";
             this.xrTableCell278.StylePriority.UseFont = false;
             this.xrTableCell278.Text = "10-Nov-2025";
-            this.xrTableCell278.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell278.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell278.Weight = 1D;
             // 
             // xrTableCell279
@@ -1669,7 +1669,7 @@
             this.xrTableCell308.Name = "xrTableCell308";
             this.xrTableCell308.StylePriority.UseFont = false;
             this.xrTableCell308.Text = "10-Nov-2025";
-            this.xrTableCell308.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell308.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell308.Weight = 1D;
             // 
             // xrTableCell309
@@ -4087,6 +4087,7 @@
             this.xrTableCell17.Multiline = true;
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.Text = "19-Feb-2010";
+            this.xrTableCell17.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell17.Weight = 0.703605083146256D;
             // 
             // xrTableCell18
@@ -5115,7 +5116,7 @@
             this.xrTableCell33.StylePriority.UseFont = false;
             this.xrTableCell33.StylePriority.UseTextAlignment = false;
             this.xrTableCell33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell33.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell33.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell33.Weight = 1.0138282377936203D;
             // 
             // xrTableCell34
@@ -5136,6 +5137,7 @@
             // xrTableCell101
             // 
             this.xrTableCell101.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell101.CanGrow = false;
             this.xrTableCell101.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NMInstallDate]")});
             this.xrTableCell101.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
@@ -5145,7 +5147,7 @@
             this.xrTableCell101.StylePriority.UseFont = false;
             this.xrTableCell101.StylePriority.UseTextAlignment = false;
             this.xrTableCell101.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell101.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell101.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell101.Weight = 1.0138282377936203D;
             // 
             // xrTableRow6
@@ -5314,7 +5316,7 @@
             this.xrTableCell47.StylePriority.UseBorders = false;
             this.xrTableCell47.StylePriority.UseFont = false;
             this.xrTableCell47.Text = "20-Sept-2025";
-            this.xrTableCell47.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell47.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell47.Weight = 1.0138282377936203D;
             // 
             // xrTableCell48
@@ -5329,7 +5331,7 @@
             this.xrTableCell48.StylePriority.UseBorders = false;
             this.xrTableCell48.StylePriority.UseFont = false;
             this.xrTableCell48.Text = "25-Sept-2025";
-            this.xrTableCell48.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell48.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell48.Weight = 1.0138282377936203D;
             // 
             // xrTableCell49
@@ -5344,7 +5346,7 @@
             this.xrTableCell49.StylePriority.UseBorders = false;
             this.xrTableCell49.StylePriority.UseFont = false;
             this.xrTableCell49.Text = "08-Oct-2025";
-            this.xrTableCell49.TextFormatString = "{0:dd-MMM-yy}";
+            this.xrTableCell49.TextFormatString = "{0:dd-MMM-yyyy}";
             this.xrTableCell49.Weight = 1.0138282377936203D;
             // 
             // xrPictureBox5
@@ -5449,7 +5451,7 @@
             this.sqlDataSource1});
             this.DataMember = "SSQ_GetNetMeterBillsWithHistory";
             this.DataSource = this.sqlDataSource1;
-            this.Margins = new DevExpress.Drawing.DXMargins(50F, 50F, 50F, 50F);
+            this.Margins = new DevExpress.Drawing.DXMargins(50F, 49F, 50F, 50F);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;

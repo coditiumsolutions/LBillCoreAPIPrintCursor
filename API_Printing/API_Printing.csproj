@@ -25,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Reports\ElectricityBillCursor.cs">
+      <SubType>XtraReport</SubType>
+    </Compile>
     <Compile Update="Reports\MaintenanceBillCursor.cs">
       <SubType>XtraReport</SubType>
     </Compile>

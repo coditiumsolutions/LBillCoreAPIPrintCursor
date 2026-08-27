@@ -50,6 +50,9 @@ namespace API_Printing.Controllers
                 SetParameter("BillingYear", year);
                 SetParameter("Project", Project);
 
+                // ✅ Filter: Exclude AMI Meter bills (where AMI != 'AMI')
+                report.FilterString = "[AMI] != 'AMI'";
+
                 // ✅ Increase SQL command timeout to 120s
                 if (report.DataSource is SqlDataSource sqlDataSource)
                 {

@@ -1684,7 +1684,7 @@
             // 
             // xrPictureBox4
             // 
-            this.xrPictureBox4.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBox4.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.xrPictureBox4.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox4.ImageSource"));
             this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(458.7082F, 0F);
             this.xrPictureBox4.Name = "xrPictureBox4";
